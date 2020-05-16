@@ -1,9 +1,10 @@
 SELECT 
-    EMPLOYEE_ID, 
+    EMPLOYEE_ID,
     DATE_FORMAT(START_DATE, '%d/%m/%Y') AS `Data Início`,
     DATE_FORMAT(END_DATE, '%d/%m/%Y') AS `Data Rescisão`,
     ROUND(DATEDIFF(END_DATE, START_DATE) / 365, 2) AS `Anos trabalhados`
-FROM hr.job_history
+FROM
+    hr.job_history
 ORDER BY EMPLOYEE_ID;
 
 ### OUTRA FORMA ###
