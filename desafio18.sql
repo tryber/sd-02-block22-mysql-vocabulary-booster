@@ -4,7 +4,7 @@ DELIMITER $$
 CREATE FUNCTION ExibirQuantidadePessoasContratadasPorMesEAno(mes INT, ano INT)
 RETURNS INT READS SQL DATA
 BEGIN
-	DECLARE QuantidadeFuncionariosContratados INT;
+    DECLARE QuantidadeFuncionariosContratados INT;
     SELECT COUNT(EMPLOYEE_ID)
     FROM hr.employees
     WHERE MONTH(HIRE_DATE) = mes AND YEAR(HIRE_DATE) = ano
