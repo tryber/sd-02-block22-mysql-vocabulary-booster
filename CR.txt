@@ -1,3 +1,0 @@
-Desafio 11
-
-Desafio 14 - Porque precisa de ordenar lá fora nos Selects e não depois dos dois selects?

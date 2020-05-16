@@ -18,4 +18,3 @@ END $$
 DELIMITER ;
 
 CALL ExibirHistoricoCompletoPorFuncionario(101);
-
