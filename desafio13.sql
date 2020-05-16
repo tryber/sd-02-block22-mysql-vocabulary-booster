@@ -3,7 +3,7 @@ SELECT
 FROM
     w3schools.products P
 WHERE
-    (SELECT 
+    (SELECT
             SUM(O.Quantity)
         FROM
             w3schools.order_details O
