@@ -1,5 +1,5 @@
 SELECT
-  JOB_ID AS `Código do Cargo`,
+  JOB_ID AS 'Código do Cargo'
   AVG(SALARY) AS Média,
   (
     CASE
@@ -9,7 +9,8 @@ SELECT
       AND 7500 THEN 'Pleno'
       WHEN AVG(SALARY) BETWEEN 7501
       AND 10500 THEN 'Sênior'
-      ELSE 'CEO'
+      WHEN AVG(SALARY) > 10500 THEN 'CEO'
+      ELSE 'Não cadastrado'
     END
   ) AS Senioridade
 FROM
