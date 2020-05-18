@@ -9,7 +9,7 @@ BEGIN
         (SELECT jobs.JOB_TITLE FROM hr.jobs as jobs WHERE jobs.JOB_ID = jh.JOB_ID)
             AS Cargo,
         (SELECT dep.DEPARTMENT_NAME FROM  hr.departments as dep WHERE dep.DEPARTMENT_ID = jh.DEPARTMENT_ID)
-             AS Departamento
+            AS Departamento
     FROM hr.job_history as jh
     WHERE jh.employee_id = employee_id;
 END $$
