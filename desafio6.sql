@@ -12,5 +12,4 @@ FROM
   INNER JOIN hr.jobs AS jobs ON jobs.JOB_ID = jobHistory.JOB_ID
   INNER JOIN hr.departments AS departaments ON jobHistory.DEPARTMENT_ID = departaments.DEPARTMENT_ID
 ORDER BY
-  'Nome Completo' DESC;
-  
+  `Nome Completo` DESC;
