@@ -4,4 +4,6 @@ SELECT
 FROM
   hr.jobs
 GROUP BY
-  job_title;
+  job_title
+ORDER BY
+  2;
