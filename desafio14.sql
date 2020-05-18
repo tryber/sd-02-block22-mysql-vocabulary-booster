@@ -1,0 +1,4 @@
+(SELECT DISTINCT(Country) FROM w3schools.customers ORDER BY 1 LIMIT 5)
+UNION
+(SELECT DISTINCT(Country) FROM w3schools.suppliers ORDER BY 1 LIMIT 5)
+ORDER BY 1 LIMIT 5;
