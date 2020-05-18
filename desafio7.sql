@@ -9,6 +9,6 @@ FROM
   hr.employees AS employees
   INNER JOIN hr.job_history AS jobHistory ON jobHistory.EMPLOYEE_ID = employees.EMPLOYEE_ID
 WHERE
-  month(jobHistory.START_DATE) IN (1, 2, 3)
+  MONTH(jobHistory.START_DATE) IN (1, 2, 3)
 ORDER BY
   `Nome Completo` ASC;
