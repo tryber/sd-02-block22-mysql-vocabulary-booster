@@ -18,7 +18,7 @@ BEGIN
         WHERE JH.DEPARTMENT_ID = D.DEPARTMENT_ID) as Departamento
     FROM 
         hr.job_history JH
-	WHERE JH.EMPLOYEE_ID = employee_id;
+    WHERE JH.EMPLOYEE_ID = employee_id;
 END $$
 
 DELIMITER ;
