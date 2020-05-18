@@ -1,5 +1,3 @@
-DROP FUNCTION ExibirQuantidadePessoasContratadasPorMesEAno;
-
 USE hr;
 DELIMITER $$
 
