@@ -6,9 +6,9 @@ drop procedure if exists BuscarMediaPorCategoriaDeTrabalho $$
 
 create procedure BuscarMediaPorCategoriaDeTrabalho(IN categoria VARCHAR(300), OUT media NUMERIC(6, 2))
 begin
-    select avg(salary) into media
-	from hr.employees
-	where job_id = categoria;
+select avg(salary) into media
+from hr.employees
+where job_id = categoria;
 end $$
 
 delimiter ;
