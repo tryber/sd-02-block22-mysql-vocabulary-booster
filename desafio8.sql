@@ -3,8 +3,6 @@ SELECT
 FROM
     w3schools.orders O
         INNER JOIN
-    w3schools.customers C
-WHERE
-    O.CustomerID = C.CustomerID
-        AND O.ShipperID BETWEEN 1 AND 2
+    w3schools.customers C ON O.CustomerID = C.CustomerID
+        AND O.ShipperID IN(1, 2)
 ORDER BY O.CustomerID;
