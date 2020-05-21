@@ -10,8 +10,6 @@
 -- como base e deve produzir exatamente 19 resultados. Considere que os salários mínimo e máximo da
 -- tabela jobs são salários anuais.
 
-SELECT * FROM hr.jobs;
-
 SELECT
 	job_title AS 'Cargo',
 	(max_salary - min_salary) AS 'Variação Salarial',
