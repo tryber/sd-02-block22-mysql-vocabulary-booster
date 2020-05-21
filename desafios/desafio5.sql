@@ -9,11 +9,12 @@
 -- Seu resultado deve estar ordenado em ordem crescente, usando a coluna "Variação salarial"
 -- como base e deve produzir exatamente 19 resultados. Considere que os salários mínimo e máximo da
 -- tabela jobs são salários anuais.
-
 SELECT
-	job_title AS 'Cargo',
-	(max_salary - min_salary) AS 'Variação Salarial',
-	CAST((min_salary) / 12 AS DECIMAL(10, 2)) AS 'Média mínima mensal',
-    CAST((max_salary) / 12 AS DECIMAL(10,2)) AS 'Média máxima mensal'
-FROM hr.jobs
-ORDER BY 2;
+  job_title AS 'Cargo',
+  (max_salary - min_salary) AS 'Variação Salarial',
+  CAST((min_salary) / 12 AS DECIMAL(10, 2)) AS 'Média mínima mensal',
+  CAST((max_salary) / 12 AS DECIMAL(10, 2)) AS 'Média máxima mensal'
+FROM
+  hr.jobs
+ORDER BY
+  2;

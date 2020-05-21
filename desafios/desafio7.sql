@@ -7,14 +7,19 @@
 -- funcionários que iniciaram nos meses 1,
 -- 2 ou 3.Ordene seus resultados por nome completo em ordem alfabética.Sua query deve produzir
 -- exatamente 6 registros.
-
 SELECT
-	em.employee_id,
-    CONCAT(UPPER(em.first_name), ' ', UPPER(em.last_name)) AS `Nome completo`,
-    jh.start_date,
-    em.salary
-FROM hr.employees AS em
-INNER JOIN hr.job_history AS jh
-ON em.employee_id = jh.employee_id
-AND EXTRACT(MONTH FROM jh.start_date) BETWEEN 1 AND 3
-ORDER BY `Nome completo`;
+  em.employee_id,
+  CONCAT(UPPER(em.first_name), ' ', UPPER(em.last_name)) AS `Nome completo`,
+  jh.start_date,
+  em.salary
+FROM
+  hr.employees AS em
+  INNER JOIN hr.job_history AS jh ON em.employee_id = jh.employee_id
+  AND EXTRACT(
+    MONTH
+    FROM
+      jh.start_date
+  ) BETWEEN 1
+  AND 3
+ORDER BY
+  `Nome completo`;
