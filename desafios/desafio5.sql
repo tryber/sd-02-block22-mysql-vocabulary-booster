@@ -17,4 +17,4 @@ SELECT
 FROM
   hr.jobs
 ORDER BY
-  2;
+  `Variação Salarial`;
