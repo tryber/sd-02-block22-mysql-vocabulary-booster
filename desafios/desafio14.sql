@@ -22,6 +22,4 @@ UNION
     Country
   LIMIT
     5
-)
-LIMIT
-  5;
+);
