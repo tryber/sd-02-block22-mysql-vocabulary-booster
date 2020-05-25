@@ -1,6 +1,6 @@
 select
 ey.employee_id,
-concat(UCASE(ey.first_name), ' ', UCASE(ey.last_name)) as 'Nome Completo',
+UCASE(concat(ey.first_name, ' ', ey.last_name)) as 'Nome Completo',
 jh.start_date,
 ey.salary
 from hr.employees as ey
