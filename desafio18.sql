@@ -1,3 +1,5 @@
+USE hr;
+
 DELIMITER $$
 
 CREATE FUNCTION ExibirQuantidadePessoasContratadasPorMesEAno(mes INT, ano INT)

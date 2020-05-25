@@ -1,3 +1,5 @@
+USE hr;
+
 DELIMITER $$
 
 DROP PROCEDURE IF EXISTS ExibirHistoricoCompletoPorFuncionario $$
