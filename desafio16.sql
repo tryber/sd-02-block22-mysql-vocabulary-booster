@@ -1,8 +1,9 @@
 use hr;
-DROP PROCEDURE IF EXISTS BuscarQuantidadeDeEmpregosPorFuncionario;
+DROP FUNCTION IF EXISTS BuscarQuantidadeDeEmpregosPorFuncionario;
 DELIMITER $$
-CREATE PROCEDURE BuscarQuantidadeDeEmpregosPorFuncionario(in id INT)
-BEGIN
+CREATE FUNCTION BuscarQuantidadeDeEmpregosPorFuncionario(id INT)
+returns INT
+deterministic
   select count(*) from job_history where employee_ID = id;
-END $$ DELIMITER ;
+$$ DELIMITER ;
 CALL BuscarQuantidadeDeEmpregosPorFuncionario(101);

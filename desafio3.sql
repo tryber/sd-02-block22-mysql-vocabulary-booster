@@ -1,4 +1,5 @@
 select job_title,
-(max_salary - min_salary) as 'Diferença média entre salários mínimos e máximos'
+avg(max_salary - min_salary) as 'Diferença média entre salários mínimos e máximos'
 from hr.jobs
-order by (max_salary - min_salary);
+group by job_title
+order by avg(max_salary - min_salary);
