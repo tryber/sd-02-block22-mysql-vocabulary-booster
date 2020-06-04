@@ -6,5 +6,5 @@ SELECT
 FROM w3schools.orders AS O
 INNER JOIN w3schools.customers AS C
 ON O.CustomerID = C.CustomerID
-HAVING O.shipperid IN (1, 2)
+WHERE O.shipperid IN (1, 2)
 ORDER BY O.CustomerID;

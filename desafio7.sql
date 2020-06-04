@@ -1,12 +1,10 @@
 SELECT
-  SJH.employee_id,
+  JH.employee_id,
   UCASE(CONCAT(E.first_name, ' ', E.last_name)) AS `Nome completo`,
-  SJH.start_date,
+  JH.start_date,
   E.salary
-FROM (
-  SELECT * FROM hr.job_history
-  WHERE MONTH(start_date) IN (1, 2, 3)
-) AS SJH
+FROM hr.job_history AS JH
 INNER JOIN hr.employees AS E
-ON SJH.employee_id = E.employee_id
+ON JH.employee_id = E.employee_id
+WHERE MONTH(start_date) IN (1, 2, 3)
 ORDER BY `Nome completo`;
