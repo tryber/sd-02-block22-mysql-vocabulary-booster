@@ -1,9 +1,9 @@
-select
-CustomerID,
-CustomerName as Nome,
-Country as País,
-count(Country - 1) as 'Número de compatriotas'
-from w3schools.customers
-group by Country
-order by CustomerName
-limit 88;
+select 
+  CustomerID,
+  ContactName as 'Nome',
+  Country as 'País',
+  (select (COUNT(Country) - 1) from w3schools.customers as B where A.Country = B.Country)
+  as `Número de Compatriotas`
+from w3schools.customers as A
+having `Número de Compatriotas` > 0
+order by ContactName ;

@@ -6,4 +6,4 @@ RETURNS INT
 DETERMINISTIC
 RETURN (select count(*) from employees where month(hire_date) = mes and year(hire_date) = ano);
 $$ DELIMITER ;
-CALL ExibirQuantidadePessoasContratadasPorMesEAno (6, 1987);
+select ExibirQuantidadePessoasContratadasPorMesEAno (6, 1987) as ExibirQuantidadePessoasContratadasPorMesEAno;
