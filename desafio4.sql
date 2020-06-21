@@ -1,6 +1,6 @@
 select
 job_id as 'Código de Cargo',
-avg(salary) as media,
+avg(salary) as Média,
 case
 when avg(salary) >= 2000 and avg(salary) <= 5800 then 'Junior'
 when avg(salary) >= 5801 and avg(salary) <= 7500 then 'Pleno'
