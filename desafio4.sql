@@ -9,4 +9,4 @@ when avg(salary) > 10500 then 'CEO'
 end as Senioridade
 from hr.employees
 group by job_id
-order by media;
+order by Média;
