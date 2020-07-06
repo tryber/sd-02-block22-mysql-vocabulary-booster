@@ -15,4 +15,3 @@ FROM
         INNER JOIN
     hr.departments AS dep ON jhis.department_id = dep.department_id
 ORDER BY `Nome Completo` DESC;
-
