@@ -1,6 +1,9 @@
 USE hr;
 DELIMITER $$
 
+DROP FUNCTION IF EXISTS
+ExibirQuantidadePessoasContratadasPorMesEAno;
+
 CREATE FUNCTION ExibirQuantidadePessoasContratadasPorMesEAno(mes INT, ano INT)
 RETURNS INT READS SQL DATA
 BEGIN
