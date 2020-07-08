@@ -14,4 +14,4 @@ BEGIN
   join hr.jobs as j on h.job_id = j.job_id
   where e.employee_id = id;
 END $$ DELIMITER ;
-select ExibirHistoricoCompletoPorFuncionario (101) as coisa;
+CALL ExibirHistoricoCompletoPorFuncionario (101);
